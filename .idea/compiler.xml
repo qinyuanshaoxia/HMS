@@ -7,6 +7,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="hms-common" />
+        <module name="hms-gateway" />
+        <module name="hms-server" />
         <module name="hms-user" />
       </profile>
     </annotationProcessing>

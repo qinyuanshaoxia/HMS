@@ -11,6 +11,8 @@
     <modules>
         <module>hms-user</module>
         <module>hms-common</module>
+        <module>hms-server</module>
+        <module>hms-gateway</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -18,13 +20,18 @@
         <version>2.0.3.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <dependencies>
-        <!--支持 Web 应用开发，包含 Tomcat 和 spring-mvc。 -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-    </dependencies>
-
-
+    <properties>
+        <spring-cloud.version>Finchley.RELEASE</spring-cloud.version>
+    </properties>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 </project>
