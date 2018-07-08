@@ -13,6 +13,7 @@
         <module>hms-common</module>
         <module>hms-server</module>
         <module>hms-gateway</module>
+        <module>hms-dashboard</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
